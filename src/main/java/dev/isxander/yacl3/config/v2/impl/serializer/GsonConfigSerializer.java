@@ -159,7 +159,7 @@ public class GsonConfigSerializer<T> extends ConfigSerializer<T> {
             for (String missingField : missingFields) {
                 if (fieldMap.get(missingField).serial().orElseThrow().required()) {
                     dirty = true;
-                    YACLConstants.LOGGER.warn("Missing required config field '{}''. Re-saving as default.", missingField);
+                    YACLConstants.LOGGER.warn("Missing required config field '{}'. Re-saving as default.", missingField);
                 }
             }
         }
